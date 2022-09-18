@@ -126,9 +126,9 @@ const PayPayments = () => {
                                 <h2 class="text-center">Payment</h2>
                                 <br />
                                 <div className="container   ">
-                                    <div><label>Name On Credit Card</label><input class="form-control" type="text" onChange={NameSetter}/>
+                                    <div><label>Name On Credit Card</label><input class="form-control" type="text" required onChange={NameSetter}/>
                                     </div>
-                                        <div><label>Phone Number</label><br/><input class="form-control" type="number"  min='0' onChange={PhoneNumberSetter}/></div>
+                                        <div><label>Phone Number</label><br/><input class="form-control" type="number" required  min='0' onChange={PhoneNumberSetter}/></div>
                                         <div><label>NIC Number</label><input class="form-control" type="text"onChange={NICNumberSetter}/></div>
                                         <div className={"row"}>
                                             <div className="col-sm-7">

@@ -4,6 +4,9 @@ import axios from "axios";
 import {useHistory} from "react-router-dom";
 import LogoutNav from "../Login/Greeting";
 import Greeting from "../Login/Greeting";
+import Header from "../Common/HomePage/header/header";
+import Footer from "../Common/HomePage/footer/footer";
+import "./Css/Cusview.css"
 
 
 const CustomerViewFood = () => {
@@ -67,17 +70,20 @@ const CustomerViewFood = () => {
     return (
         <div>
             <br />
-            <Greeting isLoggedIn={isLoggedIn} />
+            <Header/>
             <br />
             <a className="foodPrices" href={"/"} >
                 <i className="fa fa-home" style={{fontWeight: "bold"}}>
                 </i> Home
             </a>
+            <section className="sbar">
             <div className="col-xs-6">
                 <div className="searchBar">
                     <input type="search" className="form-control" placeholder="Search..." onChange={event =>{setSearchWord(event.target.value)}}/>
                 </div>
             </div>
+            </section>
+           
             <a className="foodPrices " href={"/shoppingCart"} style={{float: "right", marginRight:"120px"}}>
                 Cart <i className="fa fa-shopping-cart foodPrices"></i>
             </a>
@@ -112,6 +118,7 @@ const CustomerViewFood = () => {
                     </div>
                 </div>
             ))}
+            <Footer/>
         </div>
     );
 }

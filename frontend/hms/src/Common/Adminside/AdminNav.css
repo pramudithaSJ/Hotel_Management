@@ -1,0 +1,49 @@
+.logo{
+ 
+  margin-top: 20px;
+ background-image: url(./logo.png);
+  height: 100px;
+  width: 200px;
+  background-size: cover;
+  margin-left: 15%;
+}
+
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background-color:#053a31;
+    display: flex;
+    flex-direction: column;
+}
+.Adnavbar-item{
+        font-size: 20px;
+        margin-left: 10%;
+        display: flex;
+        text-decoration: inherit;
+        text-transform: uppercase;
+        outline: none;
+        color: rgb(255, 255, 255);
+        padding: 20px;
+}
+
+.icon{
+    margin-right: 25px;
+}
+.adminfooter{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    font-weight:150px;
+    color: rgb(237, 247, 255);
+    background-color:#053a31;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+
+}
+.Adnavbar-item:hover{
+ color: rgb(37, 175, 99);
+}

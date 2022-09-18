@@ -41,6 +41,7 @@ import RoomManagementReport from "./Room_Management/RoomManagementReport";
 import RoomBookingManagementReport from "./RoomBookingManagement/RoomBookingManagementReport";
 import GenerateFoodReport from "./Food/GenerateFoodReport";
 
+import Homepage from "./Common/HomePage/Homepage"
 
 function App() {
     return (
@@ -49,8 +50,8 @@ function App() {
         <div>
             <Router>
                 <div className="App"/>
-                <Header/>
-                <Route exact path="/" component={Home}/>
+                
+                <Route exact path="/" component={Homepage}/>
                 <Route exact path="/addFood" component={AddFood}/>
                 <Route exact path="/customerViewFood" component={CustomerViewFood}/>
                 <Route exact path="/foodManagement" component={FoodManagement}/>
@@ -95,7 +96,7 @@ function App() {
 
 
             </Router>
-            <Footer/>
+            
         </div>
     );
 }

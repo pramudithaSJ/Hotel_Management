@@ -2,6 +2,10 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import img from '../Images/CustomerProfile.png';
 import {useHistory} from "react-router-dom";
+import Header from "../Common/HomePage/header/header"
+import Footer from "../Common/HomePage/footer/footer"
+import "./customer.css"
+
 
 const CustomerProfile = () => {
 
@@ -40,30 +44,18 @@ const CustomerProfile = () => {
 
     return (
         <div>
-            <br />
-            <a className="foodPrices" href={"/"} >
-                <i className="fa fa-home" style={{fontWeight: "bold"}}>
-                </i> Home
-            </a>
-            <button onClick={Logout} className="btn qtyAdd profileButton" type="submit">Logout</button>
-            <br></br>
-            <h2 className="text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;Hello {Customer.Name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </h2>
+             <Header/>
+            
+            
             <div className="row">
-                <div className="col-sm-2"></div>
+           
                 <div className=" col-sm-3">
-                    <div><strong></strong><label></label></div>
+                    
+                   
                     <div className=" justify-content-center align-items-center">
-                        <div>
-                            <form method="post" className="card">
-                                <br />
-                                <br />
+                        
+                            <form method="post" className="card1">
+                              
                                 <div className="container   ">
                                     <div className="form-group">
                                         <div><label>Name</label><input className="form-control" type="text" placeholder={Customer.Name}/>
@@ -94,12 +86,9 @@ const CustomerProfile = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-sm-6 image">
-                    <img src={img} loading="auto" alt="center" height="500"
-                         width="500"/>
-                </div>
+               <Footer/>
             </div>
-        </div>
+        
     )
 }
 export default CustomerProfile;
